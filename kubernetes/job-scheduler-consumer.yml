@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-scheduler-consumer
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: job-scheduler-consumer
+  template:
+    metadata:
+      labels:
+        app: job-scheduler-consumer
+    spec:
+      containers:
+        - name: job-scheduler-consumer
+          image: mrflick72/distributed-job:latest
+          imagePullPolicy: Never
+          envFrom:
+            - secretRef:
+                name: aws-secrets
