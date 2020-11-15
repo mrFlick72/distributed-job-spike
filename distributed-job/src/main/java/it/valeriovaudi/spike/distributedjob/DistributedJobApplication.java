@@ -1,4 +1,4 @@
-package it.valeriovadui.spike.distributedjob;
+package it.valeriovaudi.spike.distributedjob;
 
 import com.amazon.sqs.javamessaging.ProviderConfiguration;
 import com.amazon.sqs.javamessaging.SQSConnectionFactory;
