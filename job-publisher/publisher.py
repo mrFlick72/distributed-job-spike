@@ -10,7 +10,7 @@ def publish():
         MessageDeduplicationId=f"{uuid.uuid4()}",
         MessageGroupId=f"{uuid.uuid4()}",
         QueueUrl=os.getenv("QUEUE_URL"),
-            MessageBody=payload
+        MessageBody=payload
     )
 
 
